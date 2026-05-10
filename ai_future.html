@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI 미래 전망</title>
+        <style>
+            body {
+                background-color: #FDF6EC;
+                color: #2C1810;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            .page-header {
+                background-color: #2C1810;
+                text-align: center;
+                padding: 28px 20px 22px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+                color: #E8913A;
+                margin: 0 0 5px;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+            }
+
+            .page-header p {
+                font-size: 13px;
+                color: #C4906A;
+                margin: 0;
+            }
+
+            .divider {
+                height: 4px;
+                background-color: #C4622D;
+                border: none;
+                margin: 0;
+            }
+
+            .overview-box {
+                background-color: #F0DFC0;
+                border-left: 5px solid #C4622D;
+                border-radius: 0 8px 8px 0;
+                padding: 18px 24px;
+                margin: 24px auto;
+                width: 88%;
+                font-size: 14px;
+                line-height: 1.9;
+                color: #4A2A1A;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            .section-heading {
+                font-size: 18px;
+                color: #2C1810;
+                border-left: 5px solid #C4622D;
+                padding-left: 12px;
+                margin: 0 auto 16px;
+                width: 88%;
+            }
+
+            /* ── 미래 변화 카드 ── */
+            .future-list {
+                width: 88%;
+                margin: 0 auto 28px;
+            }
+
+            .future-item {
+                overflow: hidden;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 6px rgba(196, 98, 45, 0.1);
+            }
+
+            .future-num {
+                float: left;
+                background-color: #C4622D;
+                color: #FDF6EC;
+                font-size: 22px;
+                font-weight: bold;
+                width: 54px;
+                padding: 16px 0;
+                text-align: center;
+            }
+
+            .future-content {
+                overflow: hidden;
+                padding: 14px 18px;
+            }
+
+            .future-content h3 {
+                font-size: 15px;
+                color: #2C1810;
+                margin: 0 0 6px;
+            }
+
+            .future-content h3 .my-pick {
+                font-size: 11px;
+                color: #E8913A;
+                font-weight: normal;
+                margin-left: 6px;
+            }
+
+            .future-content p {
+                font-size: 13px;
+                color: #4A2A1A;
+                line-height: 1.8;
+                margin: 0;
+            }
+
+            /* ── 연도별 전망 표 ── */
+            .forecast-table {
+                width: 88%;
+                margin: 0 auto 28px;
+                border-collapse: collapse;
+                border: 2px solid #C4622D;
+            }
+
+            .forecast-table th {
+                background-color: #2C1810;
+                color: #F0DFC0;
+                padding: 11px 14px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .forecast-table td {
+                background-color: #F0DFC0;
+                color: #4A2A1A;
+                padding: 11px 14px;
+                font-size: 13px;
+                border-bottom: 1px solid #D4A870;
+                vertical-align: middle;
+                line-height: 1.7;
+            }
+
+            .forecast-table tr:hover td {
+                background-color: #E8D0A0;
+            }
+
+            .year-badge {
+                display: inline-block;
+                background-color: #C4622D;
+                color: #FDF6EC;
+                border-radius: 12px;
+                padding: 3px 10px;
+                font-size: 12px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            /* ── 나의 생각 박스 ── */
+            .my-thought {
+                width: 88%;
+                margin: 0 auto 28px;
+                background-color: #F0DFC0;
+                border: 2px solid #C4622D;
+                border-radius: 10px;
+                padding: 24px 28px;
+                box-shadow: 0 4px 12px rgba(196, 98, 45, 0.15);
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            .my-thought::before {
+                content: "💬";
+                position: absolute;
+                top: -16px;
+                left: 24px;
+                font-size: 28px;
+                background-color: #FDF6EC;
+                padding: 0 4px;
+            }
+
+            .my-thought p {
+                font-size: 14px;
+                color: #4A2A1A;
+                line-height: 1.9;
+                margin: 0 0 12px;
+            }
+
+            .my-thought p:last-child {
+                margin: 0;
+            }
+
+            .my-thought .signature {
+                text-align: center;
+                font-size: 12px;
+                color: #A07850;
+                border-top: 1px solid #D4A870;
+                padding-top: 12px;
+                margin-top: 16px;
+            }
+
+            .site-footer {
+                border-top: 2px solid #D4A870;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                color: #A07850;
+                background-color: #F0DFC0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-header">
+            <h1>AI의 미래 전망</h1>
+            <p>The Future of Artificial Intelligence</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="overview-box">
+            인공지능은 앞으로 더욱 빠른 속도로 발전하여 우리 삶의 방식을 근본적으로 바꿀 것입니다.
+            단순한 자동화 도구를 넘어, <b>인간과 협력하는 파트너</b>로 진화할 것으로 예상됩니다.
+            다음은 가까운 미래에 현실이 될 주요 AI 발전 방향입니다.
+        </div>
+
+        <h2 class="section-heading">◆ 가까운 미래 변화 예상 (2025~2035)</h2>
+
+        <div class="future-list">
+            <div class="future-item">
+                <div class="future-num">1</div>
+                <div class="future-content">
+                    <h3>완전 자율주행 자동차의 상용화</h3>
+                    <p>현재 부분 자율주행 수준에서 벗어나, 운전자 없이도 모든 도로를 주행하는
+                    레벨 5 자율주행이 일반 소비자에게 보급될 것입니다.
+                    교통사고 감소와 이동 효율의 획기적인 향상이 기대됩니다.</p>
+                </div>
+            </div>
+
+            <div class="future-item">
+                <div class="future-num">2</div>
+                <div class="future-content">
+                    <h3>AI 기반 개인 맞춤형 의료</h3>
+                    <p>개인의 유전자 정보, 생활 습관, 의료 기록을 AI가 종합 분석하여
+                    질병이 발병하기 전에 예방하는 <b>예측 의료</b> 시대가 열릴 것입니다.</p>
+                </div>
+            </div>
+
+            <div class="future-item">
+                <div class="future-num">3</div>
+                <div class="future-content">
+                    <h3>AI와 VR/AR의 융합 <span class="my-pick">★ 나의 관심 분야!</span></h3>
+                    <p>AI가 실시간으로 가상 환경을 생성하고 사용자의 반응에 맞춰 조정하는
+                    <b>초몰입형 메타버스</b>가 실현될 것입니다.
+                    게임, 교육, 업무 공간이 모두 가상 현실 속으로 이동할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="future-item">
+                <div class="future-num">4</div>
+                <div class="future-content">
+                    <h3>AGI (범용 인공지능)의 등장 가능성</h3>
+                    <p>현재의 AI는 특정 작업에만 뛰어나지만, 인간처럼 어떤 문제든 스스로 해결하는
+                    <b>범용 인공지능(AGI)</b>의 개발이 연구자들 사이에서 논의되고 있습니다.
+                    실현 시 인류 문명에 가장 큰 변화를 가져올 기술로 평가됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-heading">◆ 연도별 AI 발전 전망</h2>
+
+        <table class="forecast-table">
+            <tr>
+                <th>시기</th>
+                <th>예상 발전</th>
+                <th>영향 분야</th>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><span class="year-badge">2025~2027</span></td>
+                <td>생성형 AI의 멀티모달 능력 고도화 (텍스트+이미지+음성 통합)</td>
+                <td style="text-align:center;">미디어, 교육, 창작</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><span class="year-badge">2027~2030</span></td>
+                <td>레벨 5 자율주행 상용화, AI 의사보조 시스템 의료 현장 도입</td>
+                <td style="text-align:center;">교통, 의료</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><span class="year-badge">2030~2035</span></td>
+                <td>AI-VR 융합 메타버스, AI 기반 개인 비서의 일상화</td>
+                <td style="text-align:center;">게임, 사회 전반</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><span class="year-badge">2035+</span></td>
+                <td>AGI 등장 가능성, 인간-AI 협업 사회 구조 변화</td>
+                <td style="text-align:center;">전 분야</td>
+            </tr>
+        </table>
+
+        <h2 class="section-heading">◆ 컴퓨터공학도로서 나의 생각</h2>
+
+        <div class="my-thought">
+            <p>저는 <b>건국대학교 글로컬캠퍼스 컴퓨터공학과</b> 학생으로서,
+            AI 기술이 특히 <b>게임 개발과 가상현실 분야</b>에서 가져올 변화에 큰 기대를 가지고 있습니다.</p>
+
+            <p>앞으로 AI는 단순한 적 캐릭터(NPC)의 움직임을 넘어,
+            플레이어의 행동과 감정을 실시간으로 분석해 <b>살아있는 것처럼 반응하는 게임 세계</b>를 만들어낼 것입니다.
+            이는 VR과 결합되면서 현실과 가상의 경계를 허무는 완전한 몰입 경험으로 발전할 것입니다.</p>
+
+            <p>저는 앞으로 AI와 게임 개발 기술을 함께 공부하여,
+            <b>사용자에게 전에 없던 경험을 선사하는 소프트웨어를 개발하는 엔지니어</b>가 되고 싶습니다.</p>
+
+            <div class="signature">— 건국대학교 글로컬캠퍼스 컴퓨터공학과 &nbsp;|&nbsp; 오정석</div>
+        </div>
+
+        <div class="site-footer">
+            건국대학교 글로컬캠퍼스 컴퓨터공학과 | 오정석
+        </div>
+
+    </body>
+</html>

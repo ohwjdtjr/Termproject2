@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI 소개</title>
+        <style>
+            body {
+                background-color: #FDF6EC;
+                color: #2C1810;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            /* ── 헤더 ── */
+            .page-header {
+                background-color: #2C1810;
+                text-align: center;
+                padding: 28px 20px 22px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+                color: #E8913A;
+                margin: 0 0 5px;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+            }
+
+            .page-header p {
+                font-size: 13px;
+                color: #C4906A;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+
+            .divider {
+                height: 4px;
+                background-color: #C4622D;
+                border: none;
+                margin: 0;
+            }
+
+            /* ── 개요 박스 ── */
+            .overview-box {
+                background-color: #F0DFC0;
+                border-left: 5px solid #C4622D;
+                border-radius: 0 8px 8px 0;
+                padding: 20px 24px;
+                margin: 24px auto;
+                width: 88%;
+                font-size: 14px;
+                line-height: 1.9;
+                color: #4A2A1A;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            /* ── 섹션 제목 ── */
+            .section-heading {
+                font-size: 18px;
+                color: #2C1810;
+                border-left: 5px solid #C4622D;
+                padding-left: 12px;
+                margin: 0 auto 16px;
+                width: 88%;
+            }
+
+            /* ── 타임라인 ── */
+            .timeline-wrap {
+                width: 88%;
+                margin: 0 auto 30px;
+            }
+
+            .timeline-row {
+                display: block;
+                overflow: hidden;
+                margin-bottom: 8px;
+            }
+
+            .timeline-year {
+                float: left;
+                width: 120px;
+                background-color: #C4622D;
+                color: #FDF6EC;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 12px 10px;
+                text-align: center;
+                border-radius: 6px 0 0 6px;
+            }
+
+            .timeline-content {
+                overflow: hidden;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-left: none;
+                border-radius: 0 6px 6px 0;
+                padding: 12px 18px;
+                font-size: 14px;
+                color: #4A2A1A;
+                line-height: 1.7;
+            }
+
+            /* ── 특징 2×2 카드 ── */
+            .feature-grid {
+                width: 88%;
+                margin: 0 auto 30px;
+                overflow: hidden;
+            }
+
+            .feature-row {
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+
+            .feature-card {
+                float: left;
+                width: 47%;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                padding: 16px 18px;
+                margin-right: 6%;
+                box-sizing: border-box;
+                box-shadow: 0 2px 6px rgba(196, 98, 45, 0.1);
+            }
+
+            .feature-card:last-child {
+                margin-right: 0;
+            }
+
+            .feature-card h3 {
+                font-size: 15px;
+                color: #C4622D;
+                margin: 0 0 8px;
+            }
+
+            .feature-card p {
+                font-size: 13px;
+                color: #4A2A1A;
+                line-height: 1.7;
+                margin: 0;
+            }
+
+            /* ── AI 종류 목록 ── */
+            .kinds-box {
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                padding: 20px 28px;
+                width: 88%;
+                margin: 0 auto 28px;
+                box-sizing: border-box;
+            }
+
+            .kinds-box ol {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+            .kinds-box li {
+                font-size: 14px;
+                color: #4A2A1A;
+                line-height: 1.8;
+                margin-bottom: 10px;
+            }
+
+            .kinds-box .kind-title {
+                color: #C4622D;
+                font-weight: bold;
+            }
+
+            /* ── 링크 박스 ── */
+            .link-box {
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                padding: 14px 20px;
+                text-align: center;
+                width: 88%;
+                margin: 0 auto 28px;
+                font-size: 14px;
+                color: #4A2A1A;
+            }
+
+            .link-box a {
+                color: #C4622D;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .link-box a:hover {
+                text-decoration: underline;
+            }
+
+            /* ── 푸터 ── */
+            .site-footer {
+                border-top: 2px solid #D4A870;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                color: #A07850;
+                background-color: #F0DFC0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-header">
+            <h1>인공지능(AI)이란?</h1>
+            <p>Artificial Intelligence Introduction</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="overview-box">
+            <b>인공지능(AI, Artificial Intelligence)</b>은 인간의 학습, 추론, 판단 능력을 컴퓨터가 수행하도록 만드는 기술입니다.
+            1950년 수학자 앨런 튜링(Alan Turing)이 "기계도 생각할 수 있는가?"라는 질문을 던진 것이 AI 연구의 시작으로 여겨집니다.
+            오늘날 AI는 음성 인식, 이미지 분석, 자율주행, 챗봇 등 우리 생활 곳곳에서 활용되고 있습니다.
+        </div>
+
+        <h2 class="section-heading">◆ AI의 역사</h2>
+
+        <div class="timeline-wrap">
+            <div class="timeline-row">
+                <div class="timeline-year">1950년대</div>
+                <div class="timeline-content">앨런 튜링이 <b>튜링 테스트</b> 제안, AI 개념의 출발점</div>
+            </div>
+            <div class="timeline-row">
+                <div class="timeline-year">1980년대</div>
+                <div class="timeline-content"><b>전문가 시스템(Expert System)</b> 등장, 규칙 기반 AI 발전</div>
+            </div>
+            <div class="timeline-row">
+                <div class="timeline-year">2010년대</div>
+                <div class="timeline-content"><b>딥러닝</b> 혁명 — ImageNet 대회에서 CNN이 압도적 성능 달성</div>
+            </div>
+            <div class="timeline-row">
+                <div class="timeline-year">2020년대</div>
+                <div class="timeline-content"><b>ChatGPT, Gemini</b> 등 생성형 AI의 대중화 시대</div>
+            </div>
+        </div>
+
+        <h2 class="section-heading">◆ AI의 주요 특징</h2>
+
+        <div class="feature-grid">
+            <div class="feature-row">
+                <div class="feature-card">
+                    <h3>① 데이터 학습</h3>
+                    <p>방대한 데이터를 분석하여 패턴을 스스로 찾아냅니다. 학습량이 많을수록 정확도가 향상됩니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>② 자율적 추론</h3>
+                    <p>입력된 정보를 바탕으로 문제를 스스로 분석하고 결론을 도출합니다.</p>
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-card">
+                    <h3>③ 반복 성능 향상</h3>
+                    <p>반복 학습을 통해 오류를 줄이고 지속적으로 성능을 개선합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>④ 자연어 상호작용</h3>
+                    <p>사람과 언어로 자연스럽게 대화하고 의도를 이해합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-heading">◆ AI의 종류</h2>
+
+        <div class="kinds-box">
+            <ol>
+                <li><span class="kind-title">약한 AI (Narrow AI)</span> — 특정 작업에 특화된 AI. 예: 음성 인식, 체스 프로그램</li>
+                <li><span class="kind-title">강한 AI (General AI)</span> — 인간처럼 다양한 분야에서 스스로 학습·판단 (현재 연구 단계)</li>
+                <li><span class="kind-title">초AI (Super AI)</span> — 인간의 지능을 뛰어넘는 AI (미래의 개념)</li>
+            </ol>
+        </div>
+
+        <div class="link-box">
+            참고 자료: &nbsp;
+            <a href="https://ko.wikipedia.org/wiki/인공지능" target="_blank">인공지능 위키백과</a>
+        </div>
+
+        <div class="site-footer">
+            건국대학교 글로컬캠퍼스 컴퓨터공학과 | 오정석
+        </div>
+
+    </body>
+</html>

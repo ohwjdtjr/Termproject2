@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI 핵심 기술</title>
+        <style>
+            body {
+                background-color: #FDF6EC;
+                color: #2C1810;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            /* ── 헤더 ── */
+            .page-header {
+                background-color: #2C1810;
+                text-align: center;
+                padding: 28px 20px 22px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+                color: #E8913A;
+                margin: 0 0 5px;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+            }
+
+            .page-header p {
+                font-size: 13px;
+                color: #C4906A;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+
+            .divider {
+                height: 4px;
+                background-color: #C4622D;
+                border: none;
+                margin: 0;
+            }
+
+            /* ── 개요 박스 ── */
+            .overview-box {
+                background-color: #F0DFC0;
+                border-left: 5px solid #C4622D;
+                border-radius: 0 8px 8px 0;
+                padding: 18px 24px;
+                margin: 24px auto;
+                width: 88%;
+                font-size: 14px;
+                line-height: 1.9;
+                color: #4A2A1A;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            /* ── 섹션 제목 ── */
+            .section-heading {
+                font-size: 18px;
+                color: #2C1810;
+                border-left: 5px solid #C4622D;
+                padding-left: 12px;
+                margin: 0 auto 16px;
+                width: 88%;
+            }
+
+            /* ── 핵심 기술 비교표 ── */
+            .tech-table {
+                width: 88%;
+                margin: 0 auto 30px;
+                border-collapse: collapse;
+                border: 2px solid #C4622D;
+                overflow: hidden;
+            }
+
+            .tech-table th {
+                background-color: #2C1810;
+                color: #F0DFC0;
+                padding: 12px 10px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .tech-table td {
+                background-color: #F0DFC0;
+                color: #4A2A1A;
+                padding: 11px 14px;
+                font-size: 13px;
+                border-bottom: 1px solid #D4A870;
+                vertical-align: middle;
+            }
+
+            .tech-table tr:hover td {
+                background-color: #E8D0A0;
+            }
+
+            .tech-name {
+                color: #C4622D;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            /* ── 기술 세부 카드 ── */
+            .tech-block {
+                width: 88%;
+                margin: 0 auto 18px;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            .tech-block-header {
+                background-color: #C4622D;
+                color: #FDF6EC;
+                padding: 12px 20px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            .tech-block-num {
+                display: inline-block;
+                background-color: #2C1810;
+                color: #E8913A;
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                font-size: 14px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            .tech-block-body {
+                padding: 18px 22px;
+                overflow: hidden;
+            }
+
+            /* float로 이미지 오른쪽/왼쪽 배치 */
+            .tech-img-right {
+                float: right;
+                width: 175px;
+                margin: 0 0 12px 20px;
+                text-align: center;
+            }
+
+            .tech-img-left {
+                float: left;
+                width: 175px;
+                margin: 0 20px 12px 0;
+                text-align: center;
+            }
+
+            .tech-img-right img,
+            .tech-img-left img {
+                width: 175px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 6px;
+                border: 2px solid #D4A870;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            }
+
+            .tech-img-right span,
+            .tech-img-left span {
+                display: block;
+                font-size: 11px;
+                color: #A07850;
+                margin-top: 4px;
+            }
+
+            .tech-desc {
+                font-size: 14px;
+                color: #4A2A1A;
+                line-height: 1.8;
+                margin-bottom: 10px;
+            }
+
+            .tech-sub-title {
+                font-size: 13px;
+                color: #C4622D;
+                font-weight: bold;
+                margin: 10px 0 5px;
+            }
+
+            .tech-list {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+            .tech-list li {
+                font-size: 13px;
+                color: #4A2A1A;
+                line-height: 1.8;
+            }
+
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            /* ── 푸터 ── */
+            .site-footer {
+                border-top: 2px solid #D4A870;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                color: #A07850;
+                background-color: #F0DFC0;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-header">
+            <h1>AI 핵심 기술</h1>
+            <p>Core Technologies of Artificial Intelligence</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="overview-box">
+            인공지능은 단일 기술이 아니라 <b>여러 기술의 집합</b>입니다.
+            그 중 가장 핵심이 되는 기술은 <b>머신러닝, 딥러닝, 자연어 처리(NLP), 컴퓨터 비전</b>입니다.
+            각각의 기술이 어떻게 작동하는지 이해하면 AI 전반을 파악할 수 있습니다.
+        </div>
+
+        <h2 class="section-heading">◆ 핵심 기술 비교표</h2>
+
+        <table class="tech-table">
+            <tr>
+                <th>기술명</th>
+                <th>핵심 개념</th>
+                <th>동작 방식</th>
+                <th>주요 활용 예시</th>
+            </tr>
+            <tr>
+                <td class="tech-name">머신러닝</td>
+                <td>데이터에서 패턴을 자동으로 학습</td>
+                <td>통계 기반 알고리즘으로 규칙 발견</td>
+                <td>넷플릭스 추천, 스팸 메일 필터</td>
+            </tr>
+            <tr>
+                <td class="tech-name">딥러닝</td>
+                <td>인공신경망을 여러 층으로 쌓은 기술</td>
+                <td>입력 → 은닉층 → 출력 단계로 처리</td>
+                <td>얼굴 인식, 자율주행, 의료 영상</td>
+            </tr>
+            <tr>
+                <td class="tech-name">자연어 처리</td>
+                <td>인간의 언어를 이해하고 생성</td>
+                <td>문장 분석 후 의미와 문맥 파악</td>
+                <td>ChatGPT, 번역기, 음성 비서</td>
+            </tr>
+            <tr>
+                <td class="tech-name">컴퓨터 비전</td>
+                <td>이미지와 영상 데이터를 분석</td>
+                <td>픽셀 패턴에서 객체와 특징 인식</td>
+                <td>의료 X-ray 판독, CCTV 분석</td>
+            </tr>
+        </table>
+
+        <h2 class="section-heading">◆ 기술 세부 설명</h2>
+
+        <!-- 머신러닝 -->
+        <div class="tech-block">
+            <div class="tech-block-header">
+                <span class="tech-block-num">①</span> 머신러닝 (Machine Learning)
+            </div>
+            <div class="tech-block-body clearfix">
+                <div class="tech-img-right">
+                    <img src="img_ml.jpg" alt="머신러닝 개념 이미지">
+                    <span>▲ 머신러닝 개념도</span>
+                </div>
+                <p class="tech-desc">
+                    머신러닝은 컴퓨터가 명시적으로 프로그래밍되지 않아도
+                    <b>데이터를 통해 스스로 규칙을 학습</b>하는 기술입니다.
+                </p>
+                <p class="tech-sub-title">대표 알고리즘:</p>
+                <ul class="tech-list">
+                    <li><b>지도학습</b> — 정답이 있는 데이터로 학습 (스팸 분류, 가격 예측)</li>
+                    <li><b>비지도학습</b> — 정답 없이 패턴을 스스로 발견 (고객 군집화)</li>
+                    <li><b>강화학습</b> — 보상/벌칙으로 행동 최적화 (게임 AI, 로봇)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 딥러닝 -->
+        <div class="tech-block">
+            <div class="tech-block-header">
+                <span class="tech-block-num">②</span> 딥러닝 (Deep Learning)
+            </div>
+            <div class="tech-block-body clearfix">
+                <div class="tech-img-left">
+                    <img src="img_dl.jpg" alt="딥러닝 신경망 이미지">
+                    <span>▲ 딥러닝 신경망 구조</span>
+                </div>
+                <p class="tech-desc">
+                    딥러닝은 <b>인간의 뇌 신경망 구조를 모방</b>한 기술로,
+                    수십~수백 개의 층(Layer)으로 이루어진 인공신경망을 사용합니다.
+                    특히 대용량 데이터와 GPU 연산의 발전으로 급격히 성장하였습니다.
+                </p>
+                <p class="tech-sub-title">주요 네트워크 구조:</p>
+                <ul class="tech-list">
+                    <li><b>CNN (합성곱 신경망)</b> — 이미지 인식에 특화</li>
+                    <li><b>RNN (순환 신경망)</b> — 순서가 있는 시계열 데이터 처리</li>
+                    <li><b>Transformer</b> — GPT, BERT 등 현재 AI의 핵심 구조</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 자연어 처리 -->
+        <div class="tech-block">
+            <div class="tech-block-header">
+                <span class="tech-block-num">③</span> 자연어 처리 (NLP)
+            </div>
+            <div class="tech-block-body clearfix">
+                <div class="tech-img-right">
+                    <img src="img_nlp.jpg" alt="자연어처리 이미지">
+                    <span>▲ 자연어 처리 개념도</span>
+                </div>
+                <p class="tech-desc">
+                    자연어 처리는 컴퓨터가 <b>인간의 언어를 이해하고 생성</b>할 수 있게 하는 기술입니다.
+                    문장의 문법 구조 분석, 감정 분석, 번역, 요약 등 다양한 언어 작업에 활용됩니다.
+                </p>
+                <p class="tech-sub-title">활용 예시:</p>
+                <ul class="tech-list">
+                    <li>ChatGPT, Claude 등 <b>대화형 AI</b></li>
+                    <li>파파고, 구글 번역 등 <b>기계 번역</b></li>
+                    <li>시리, 빅스비 등 <b>음성 비서</b></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer">
+            건국대학교 글로컬캠퍼스 컴퓨터공학과 | 오정석
+        </div>
+
+    </body>
+</html>

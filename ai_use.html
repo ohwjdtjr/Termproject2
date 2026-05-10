@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI 활용 분야</title>
+        <style>
+            body {
+                background-color: #FDF6EC;
+                color: #2C1810;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            .page-header {
+                background-color: #2C1810;
+                text-align: center;
+                padding: 28px 20px 22px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+                color: #E8913A;
+                margin: 0 0 5px;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+            }
+
+            .page-header p {
+                font-size: 13px;
+                color: #C4906A;
+                margin: 0;
+            }
+
+            .divider {
+                height: 4px;
+                background-color: #C4622D;
+                border: none;
+                margin: 0;
+            }
+
+            .overview-box {
+                background-color: #F0DFC0;
+                border-left: 5px solid #C4622D;
+                border-radius: 0 8px 8px 0;
+                padding: 18px 24px;
+                margin: 24px auto;
+                width: 88%;
+                font-size: 14px;
+                line-height: 1.9;
+                color: #4A2A1A;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            .section-heading {
+                font-size: 18px;
+                color: #2C1810;
+                border-left: 5px solid #C4622D;
+                padding-left: 12px;
+                margin: 0 auto 16px;
+                width: 88%;
+            }
+
+            /* ── 활용 분야 카드 ── */
+            .use-block {
+                width: 88%;
+                margin: 0 auto 16px;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            .use-block-header {
+                background-color: #C4622D;
+                color: #FDF6EC;
+                padding: 12px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                overflow: hidden;
+            }
+
+            .use-block-header .badge {
+                float: right;
+                background-color: #E8913A;
+                color: #2C1810;
+                font-size: 11px;
+                padding: 2px 8px;
+                border-radius: 10px;
+                font-weight: normal;
+                margin-top: 2px;
+            }
+
+            .use-block-body {
+                padding: 18px 22px;
+                overflow: hidden;
+            }
+
+            .use-img-left {
+                float: left;
+                width: 160px;
+                margin: 0 20px 12px 0;
+                text-align: center;
+            }
+
+            .use-img-right {
+                float: right;
+                width: 160px;
+                margin: 0 0 12px 20px;
+                text-align: center;
+            }
+
+            .use-img-left img,
+            .use-img-right img {
+                width: 160px;
+                height: 110px;
+                object-fit: cover;
+                border-radius: 6px;
+                border: 2px solid #D4A870;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            }
+
+            .use-img-left span,
+            .use-img-right span {
+                display: block;
+                font-size: 11px;
+                color: #A07850;
+                margin-top: 4px;
+            }
+
+            .use-desc {
+                font-size: 14px;
+                color: #4A2A1A;
+                line-height: 1.8;
+                margin-bottom: 10px;
+            }
+
+            .use-list {
+                margin: 6px 0 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .use-list li {
+                font-size: 13px;
+                color: #C4622D;
+                padding: 2px 0;
+            }
+
+            .use-list li::before {
+                content: "▸ ";
+                color: #E8913A;
+            }
+
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            /* ── 요약 비교표 ── */
+            .summary-table {
+                width: 88%;
+                margin: 0 auto 28px;
+                border-collapse: collapse;
+                border: 2px solid #C4622D;
+            }
+
+            .summary-table th {
+                background-color: #2C1810;
+                color: #F0DFC0;
+                padding: 11px 10px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .summary-table td {
+                background-color: #F0DFC0;
+                color: #4A2A1A;
+                padding: 10px 14px;
+                font-size: 13px;
+                border-bottom: 1px solid #D4A870;
+                text-align: center;
+            }
+
+            .summary-table tr:hover td {
+                background-color: #E8D0A0;
+            }
+
+            .stars { color: #C4622D; }
+
+            .link-box {
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                padding: 14px 20px;
+                text-align: center;
+                width: 88%;
+                margin: 0 auto 28px;
+                font-size: 14px;
+                color: #4A2A1A;
+            }
+
+            .link-box a {
+                color: #C4622D;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .link-box a:hover { text-decoration: underline; }
+
+            .site-footer {
+                border-top: 2px solid #D4A870;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                color: #A07850;
+                background-color: #F0DFC0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-header">
+            <h1>AI 활용 분야</h1>
+            <p>AI Applications in Real Life</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="overview-box">
+            인공지능은 이미 우리 생활 곳곳에 깊숙이 들어와 있습니다.
+            의료 현장에서 질병을 진단하고, 게임 속에서 적 캐릭터를 움직이며,
+            학교에서는 개인 맞춤형 학습을 제공하고, 도로에서는 스스로 주행하는 자동차를 실현합니다.
+            <b>AI가 실제로 어떻게 활용되는지</b> 주요 분야별로 살펴봅니다.
+        </div>
+
+        <h2 class="section-heading">◆ 주요 활용 분야</h2>
+
+        <!-- 의료 -->
+        <div class="use-block">
+            <div class="use-block-header">
+                🏥 의료 분야
+            </div>
+            <div class="use-block-body clearfix">
+                <div class="use-img-left">
+                    <img src="img_medical.jpg" alt="AI 의료 이미지">
+                    <span>▲ AI 의료 영상 분석</span>
+                </div>
+                <p class="use-desc">
+                    AI는 의료 영상(X-ray, MRI)을 분석하여 <b>암, 골절 등 질병을 조기 진단</b>합니다.
+                    인간 의사가 놓칠 수 있는 미세한 이상 징후도 딥러닝으로 탐지 가능합니다.
+                    또한 환자의 과거 데이터를 바탕으로 <b>맞춤형 치료 방법</b>을 추천합니다.
+                </p>
+                <ul class="use-list">
+                    <li>AI 영상 판독 시스템 (폐암, 유방암 진단)</li>
+                    <li>신약 개발 시뮬레이션 가속화</li>
+                    <li>수술 보조 로봇 (다빈치 시스템)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 게임 -->
+        <div class="use-block">
+            <div class="use-block-header">
+                🎮 게임 분야
+                <span class="badge">나의 주요 관심 분야!</span>
+            </div>
+            <div class="use-block-body clearfix">
+                <div class="use-img-right">
+                    <img src="img_game.jpg" alt="게임 AI 이미지">
+                    <span>▲ 게임 속 AI 활용</span>
+                </div>
+                <p class="use-desc">
+                    게임 속 NPC(Non-Player Character)의 행동 패턴, 적 AI의 전략, 게임 밸런싱 등에
+                    AI 기술이 핵심적으로 사용됩니다. <b>강화학습</b>을 이용하면 AI가 스스로 게임을 익혀
+                    인간 최고수를 뛰어넘는 수준에 도달하기도 합니다.
+                </p>
+                <ul class="use-list">
+                    <li>AlphaGo — 바둑 세계 챔피언 격파</li>
+                    <li>OpenAI Five — 도타2 프로게이머 상대 승리</li>
+                    <li>게임 내 절차적 콘텐츠 생성 (맵, 스토리 자동 생성)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 교육 -->
+        <div class="use-block">
+            <div class="use-block-header">
+                📚 교육 분야
+            </div>
+            <div class="use-block-body clearfix">
+                <p class="use-desc">
+                    AI 튜터는 학생의 학습 수준과 속도를 파악하여 <b>개인 맞춤형 문제와 설명</b>을 제공합니다.
+                    오답 패턴을 분석해 취약한 부분을 집중적으로 보완시켜주는 시스템도 등장하고 있습니다.
+                </p>
+                <ul class="use-list">
+                    <li>AI 기반 학습 플랫폼 (칸아카데미 AI 튜터)</li>
+                    <li>자동 채점 및 피드백 시스템</li>
+                    <li>외국어 학습 앱 (듀오링고의 AI 적응 학습)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 자율주행 -->
+        <div class="use-block">
+            <div class="use-block-header">
+                🚗 자율주행 분야
+            </div>
+            <div class="use-block-body clearfix">
+                <div class="use-img-left">
+                    <img src="img_selfdriving.jpg" alt="자율주행 이미지">
+                    <span>▲ 자율주행 자동차</span>
+                </div>
+                <p class="use-desc">
+                    자율주행 자동차는 카메라, 레이더, 라이다(LiDAR) 등 센서 데이터를 AI가 실시간으로 분석하여
+                    <b>차선 유지, 장애물 회피, 경로 탐색</b>을 수행합니다.
+                    테슬라, 웨이모 등 기업이 상용화를 선도하고 있습니다.
+                </p>
+                <ul class="use-list">
+                    <li>테슬라 오토파일럿 — 고속도로 자율주행</li>
+                    <li>웨이모 — 완전 자율주행 택시 서비스</li>
+                    <li>배달 로봇, 자율주행 드론 택배</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-heading">◆ 분야별 요약 비교</h2>
+
+        <table class="summary-table">
+            <tr>
+                <th>분야</th>
+                <th>핵심 기술</th>
+                <th>대표 사례</th>
+                <th>영향도</th>
+            </tr>
+            <tr>
+                <td><b>의료</b></td>
+                <td>컴퓨터 비전, 딥러닝</td>
+                <td>AI 영상 판독</td>
+                <td><span class="stars">★★★★★</span></td>
+            </tr>
+            <tr>
+                <td><b>게임</b></td>
+                <td>강화학습, NPC AI</td>
+                <td>AlphaGo, 게임 봇</td>
+                <td><span class="stars">★★★★☆</span></td>
+            </tr>
+            <tr>
+                <td><b>교육</b></td>
+                <td>NLP, 추천 시스템</td>
+                <td>AI 튜터, 자동 채점</td>
+                <td><span class="stars">★★★★☆</span></td>
+            </tr>
+            <tr>
+                <td><b>자율주행</b></td>
+                <td>컴퓨터 비전, 센서 융합</td>
+                <td>테슬라, 웨이모</td>
+                <td><span class="stars">★★★★★</span></td>
+            </tr>
+        </table>
+
+        <div class="link-box">
+            더 자세한 정보: &nbsp;
+            <a href="https://ko.wikipedia.org/wiki/인공지능" target="_blank">인공지능 위키백과</a>
+        </div>
+
+        <div class="site-footer">
+            건국대학교 글로컬캠퍼스 컴퓨터공학과 | 오정석
+        </div>
+
+    </body>
+</html>

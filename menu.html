@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>메뉴</title>
+        <style>
+            body {
+                background-color: #2C1810;
+                color: #F0DFC0;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            .profile-wrap {
+                text-align: center;
+                padding: 24px 12px 14px;
+                border-bottom: 2px solid #C4622D;
+                background-color: #3A1F12;
+            }
+
+            .profile-photo {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                border: 3px solid #E8913A;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 10px;
+                box-shadow: 0 4px 16px rgba(196, 98, 45, 0.5);
+            }
+
+            .profile-name-kr {
+                font-size: 20px;
+                font-weight: bold;
+                color: #E8913A;
+                letter-spacing: 6px;
+                margin: 0 0 2px;
+            }
+
+            .profile-name-en {
+                font-size: 11px;
+                color: #C4906A;
+                letter-spacing: 2px;
+                margin: 0 0 8px;
+            }
+
+            .profile-dept {
+                font-size: 10px;
+                color: #A07850;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            .interest-wrap {
+                padding: 12px 14px;
+                border-bottom: 1px solid #4A2A1A;
+            }
+
+            .interest-title {
+                font-size: 10px;
+                color: #A07850;
+                letter-spacing: 2px;
+                margin: 0 0 7px;
+            }
+
+            .tag {
+                display: inline-block;
+                background-color: #4A2A1A;
+                color: #E8913A;
+                font-size: 10px;
+                padding: 3px 8px;
+                border-radius: 10px;
+                margin: 2px 2px;
+                border: 1px solid #7A3A20;
+            }
+
+            .site-link-wrap {
+                padding: 9px 14px;
+                border-bottom: 1px solid #4A2A1A;
+                font-size: 11px;
+                color: #A07850;
+            }
+
+            .site-link-wrap a {
+                color: #E8913A;
+                text-decoration: none;
+            }
+
+            .site-link-wrap a:hover {
+                color: #FDF6EC;
+                text-decoration: underline;
+            }
+
+            .menu-header {
+                text-align: center;
+                padding: 14px 0 6px;
+                font-size: 13px;
+                color: #E8913A;
+                letter-spacing: 4px;
+                font-weight: bold;
+            }
+
+            .nav-list {
+                list-style: none;
+                margin: 0;
+                padding: 0 12px 16px;
+            }
+
+            .nav-list li {
+                margin-bottom: 5px;
+            }
+
+            .nav-list a {
+                display: block;
+                background-color: #3A1F12;
+                color: #F0DFC0;
+                text-decoration: none;
+                padding: 9px 14px;
+                border-radius: 6px;
+                font-size: 13px;
+                border-left: 3px solid #C4622D;
+            }
+
+            .nav-list a:hover {
+                background-color: #C4622D;
+                color: #FDF6EC;
+                border-left-color: #E8913A;
+            }
+
+            .footer {
+                text-align: center;
+                font-size: 10px;
+                color: #6A4030;
+                padding: 12px 0;
+                border-top: 1px solid #4A2A1A;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="profile-wrap">
+            <img src="myphoto.jpg" class="profile-photo" alt="오정석 프로필 사진">
+            <p class="profile-name-kr">오&nbsp;정&nbsp;석</p>
+            <p class="profile-name-en">Oh Jeong-seok</p>
+            <p class="profile-dept">건국대학교 글로컬캠퍼스<br>컴퓨터공학과</p>
+        </div>
+
+        <div class="interest-wrap">
+            <p class="interest-title">관심 분야</p>
+            <span class="tag">✦ AI &amp; 머신러닝</span>
+            <span class="tag">✦ VR / 가상현실</span>
+            <span class="tag">✦ 게임 개발</span>
+        </div>
+
+        <div class="site-link-wrap">
+            🔗 &nbsp;<a href="http://s1ro75.xyz" target="_blank">s1ro75.xyz</a>
+        </div>
+
+        <p class="menu-header">◈ 메 뉴 ◈</p>
+
+        <ul class="nav-list">
+            <li><a href="home.html" target="main">🏠&nbsp; 홈</a></li>
+            <li><a href="ai_intro.html" target="main">🤖&nbsp; AI 소개</a></li>
+            <li><a href="ai_tech.html" target="main">⚙️&nbsp; 핵심 기술</a></li>
+            <li><a href="ai_use.html" target="main">💡&nbsp; 활용 분야</a></li>
+            <li><a href="ai_future.html" target="main">🚀&nbsp; 미래 전망</a></li>
+            <li><a href="ai_glossary.html" target="main">📖&nbsp; 용어 사전</a></li>
+        </ul>
+
+        <div class="footer">© 2025 오정석</div>
+
+    </body>
+</html>

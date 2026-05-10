@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI 용어 사전</title>
+        <style>
+            body {
+                background-color: #FDF6EC;
+                color: #2C1810;
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, '나눔명조', serif;
+            }
+
+            /* ── 헤더 ── */
+            .page-header {
+                background-color: #2C1810;
+                text-align: center;
+                padding: 28px 20px 22px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .page-header::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4622D' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+                color: #E8913A;
+                margin: 0 0 5px;
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+                position: relative;
+            }
+
+            .page-header p {
+                font-size: 13px;
+                color: #C4906A;
+                margin: 0;
+                letter-spacing: 1px;
+                position: relative;
+            }
+
+            .divider {
+                height: 4px;
+                background-color: #C4622D;
+                border: none;
+                margin: 0;
+            }
+
+            /* ── 개요 박스 ── */
+            .overview-box {
+                background-color: #F0DFC0;
+                border-left: 5px solid #C4622D;
+                border-radius: 0 8px 8px 0;
+                padding: 20px 24px;
+                margin: 24px auto;
+                width: 88%;
+                font-size: 14px;
+                line-height: 1.9;
+                color: #4A2A1A;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+                box-sizing: border-box;
+            }
+
+            .overview-box b {
+                color: #2C1810;
+            }
+
+            /* ── 섹션 제목 ── */
+            .section-heading {
+                font-size: 18px;
+                color: #2C1810;
+                border-left: 5px solid #C4622D;
+                padding-left: 12px;
+                margin: 0 auto 16px;
+                width: 88%;
+            }
+
+            /* ── 기초 용어 카드 (이미지 포함) ── */
+            .term-card {
+                width: 88%;
+                margin: 0 auto 14px;
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+                display: table;
+                box-sizing: border-box;
+            }
+
+            .term-card-img {
+                display: table-cell;
+                width: 220px;
+                vertical-align: middle;
+                text-align: center;
+                padding: 16px;
+                background-color: #EDD5A8;
+                border-right: 1px solid #D4A870;
+            }
+
+            .term-card-img img {
+                width: 180px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+            .term-card-body {
+                display: table-cell;
+                vertical-align: top;
+                padding: 20px 24px;
+            }
+
+            .term-card-body h3 {
+                font-size: 17px;
+                color: #2C1810;
+                margin: 0 0 10px;
+                border-bottom: 1px solid #D4A870;
+                padding-bottom: 8px;
+            }
+
+            .term-card-body h3 span {
+                color: #C4622D;
+            }
+
+            .term-card-body p {
+                font-size: 13px;
+                color: #4A2A1A;
+                line-height: 1.8;
+                margin: 0 0 10px;
+            }
+
+            .term-card-body .examples {
+                font-size: 12px;
+                color: #C4622D;
+                font-style: italic;
+            }
+
+            /* ── 심화 용어 표 ── */
+            .glossary-table {
+                width: 88%;
+                margin: 0 auto 30px;
+                border-collapse: collapse;
+                border: 2px solid #C4622D;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(196, 98, 45, 0.1);
+            }
+
+            .glossary-table th {
+                background-color: #C4622D;
+                color: #FDF6EC;
+                font-size: 14px;
+                padding: 13px 10px;
+                text-align: center;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+
+            .glossary-table td {
+                font-size: 13px;
+                padding: 14px 16px;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 1.7;
+                border-top: 1px solid #D4A870;
+                color: #4A2A1A;
+            }
+
+            .glossary-table tr:nth-child(odd) td {
+                background-color: #F0DFC0;
+            }
+
+            .glossary-table tr:nth-child(even) td {
+                background-color: #FAF0DC;
+            }
+
+            .glossary-table td:first-child {
+                color: #2C1810;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .glossary-table td:nth-child(2) {
+                text-align: left;
+            }
+
+            /* ── 참고 링크 ── */
+            .link-box {
+                background-color: #F0DFC0;
+                border: 1px solid #D4A870;
+                border-radius: 8px;
+                padding: 14px 20px;
+                text-align: center;
+                width: 88%;
+                margin: 0 auto 28px;
+                font-size: 14px;
+                color: #4A2A1A;
+                box-sizing: border-box;
+            }
+
+            .link-box a {
+                color: #C4622D;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .link-box a:hover {
+                color: #2C1810;
+                text-decoration: underline;
+            }
+
+            /* ── 푸터 ── */
+            .site-footer {
+                border-top: 2px solid #D4A870;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                color: #A07850;
+                background-color: #F0DFC0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- 헤더 -->
+        <div class="page-header">
+            <h1>AI 용어 사전</h1>
+            <p>AI Glossary — 자주 쓰이는 핵심 용어 정리</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 개요 -->
+        <div class="overview-box">
+            인공지능 분야에는 다양한 전문 용어가 등장합니다.
+            처음 AI를 접하는 분들도 쉽게 이해할 수 있도록
+            <b>자주 쓰이는 핵심 용어</b>를 알기 쉽게 정리했습니다.
+        </div>
+
+        <!-- 기초 개념 -->
+        <h2 class="section-heading">◆ 기초 개념 용어</h2>
+
+        <!-- 인공지능 -->
+        <div class="term-card">
+            <div class="term-card-img">
+                <img src="img_ai.jpg" alt="인공지능 개념 이미지">
+            </div>
+            <div class="term-card-body">
+                <h3><span>인공지능</span> (AI, Artificial Intelligence)</h3>
+                <p>컴퓨터가 인간처럼 학습하고 판단하며 문제를 스스로 해결할 수 있도록 만드는 기술의 총칭입니다.
+                좁게는 특정 작업을 수행하는 프로그램부터, 넓게는 인간 수준의 사고를 모방하는 시스템까지 포함합니다.</p>
+                <div class="examples">예시: 음성 인식, 이미지 분류, 챗봇, 추천 시스템</div>
+            </div>
+        </div>
+
+        <!-- 머신러닝 -->
+        <div class="term-card">
+            <div class="term-card-img">
+                <img src="img_ml.jpg" alt="머신러닝 개념 이미지">
+            </div>
+            <div class="term-card-body">
+                <h3><span>머신러닝</span> (Machine Learning)</h3>
+                <p>명시적으로 규칙을 프로그래밍하지 않아도, 데이터를 통해 컴퓨터가 스스로 패턴을 찾고 학습하는 기술입니다.
+                학습 방식에 따라 지도학습, 비지도학습, 강화학습으로 나뉩니다.</p>
+                <div class="examples">예시: 스팸 메일 필터, 넷플릭스 추천, 주가 예측</div>
+            </div>
+        </div>
+
+        <!-- 딥러닝 -->
+        <div class="term-card">
+            <div class="term-card-img">
+                <img src="img_dl.jpg" alt="딥러닝 신경망 이미지">
+            </div>
+            <div class="term-card-body">
+                <h3><span>딥러닝</span> (Deep Learning)</h3>
+                <p>인간의 뇌 신경망을 모방한 인공신경망을 여러 층(Layer)으로 깊게 쌓아 학습하는 기술입니다.
+                머신러닝의 한 분야로, 대량의 데이터와 높은 연산 능력이 필요하지만 매우 높은 정확도를 보입니다.</p>
+                <div class="examples">예시: 얼굴 인식, 자율주행, 의료 영상 판독, ChatGPT</div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 심화 용어 -->
+        <h2 class="section-heading">◆ 심화 용어</h2>
+
+        <table class="glossary-table">
+            <tr>
+                <th width="22%">용어</th>
+                <th>설명</th>
+                <th width="26%">관련 예시</th>
+            </tr>
+            <tr>
+                <td>NLP<br>(자연어 처리)</td>
+                <td>컴퓨터가 인간의 언어(텍스트, 음성)를 이해하고 생성하는 기술</td>
+                <td>ChatGPT, 파파고, 시리</td>
+            </tr>
+            <tr>
+                <td>컴퓨터 비전<br>(Computer Vision)</td>
+                <td>이미지나 영상을 분석하여 물체, 사람, 상황 등을 인식하는 기술</td>
+                <td>얼굴 인식, CCTV 분석, 의료 영상</td>
+            </tr>
+            <tr>
+                <td>강화학습<br>(Reinforcement Learning)</td>
+                <td>보상과 벌칙을 통해 AI가 스스로 최적의 행동을 익혀나가는 학습 방법</td>
+                <td>AlphaGo, 게임 AI, 로봇 제어</td>
+            </tr>
+            <tr>
+                <td>생성형 AI<br>(Generative AI)</td>
+                <td>텍스트, 이미지, 음악 등 새로운 콘텐츠를 스스로 생성하는 AI</td>
+                <td>ChatGPT, DALL-E, Stable Diffusion</td>
+            </tr>
+            <tr>
+                <td>파라미터<br>(Parameter)</td>
+                <td>AI 모델이 학습을 통해 조정하는 내부 값. 많을수록 복잡한 패턴 학습 가능</td>
+                <td>GPT-4는 약 1조 개 파라미터 보유</td>
+            </tr>
+            <tr>
+                <td>AGI<br>(범용 인공지능)</td>
+                <td>인간처럼 어떤 분야든 스스로 학습하고 문제를 해결하는 AI (현재 연구 단계)</td>
+                <td>아직 실현되지 않은 미래 기술</td>
+            </tr>
+            <tr>
+                <td>할루시네이션<br>(Hallucination)</td>
+                <td>AI가 사실이 아닌 내용을 마치 사실인 것처럼 자신 있게 답하는 현상</td>
+                <td>AI가 존재하지 않는 논문을 인용하는 사례</td>
+            </tr>
+        </table>
+
+        <!-- 참고 링크 -->
+        <div class="link-box">
+            더 많은 용어 알아보기: &nbsp;
+            <a href="https://ko.wikipedia.org/wiki/인공지능" target="_blank">인공지능 위키백과</a>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="site-footer">
+            건국대학교 글로컬캠퍼스 컴퓨터공학과 | 오정석
+        </div>
+
+    </body>
+</html>
